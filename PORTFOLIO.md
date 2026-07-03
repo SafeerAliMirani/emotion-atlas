@@ -3,6 +3,8 @@
 **Dr. Safeer Ali Mirani** · GPU / XR / real-time visualisation engineer · computational neuroscientist (PhD)
 [safeer.ali.mirani@gmail.com](mailto:safeer.ali.mirani@gmail.com) · [Portfolio](https://safeeralimirani.netlify.app) · [GitHub](https://github.com/SafeerAliMirani) · [LinkedIn](https://www.linkedin.com/in/safeeralimirani)
 
+**Live demo:** [emotion-atlas.netlify.app](https://emotion-atlas.netlify.app) · **Source:** [github.com/SafeerAliMirani/emotion-atlas](https://github.com/SafeerAliMirani/emotion-atlas)
+
 Reusable copy for a CV, portfolio site, or LinkedIn. All claims are accurate and verifiable.
 
 ## Résumé bullets
@@ -32,4 +34,4 @@ Emotion Atlas turns a language model's sense of feeling into something you can f
 
 ## One-line version
 
-*Real sentence-transformer running in your browser on WebGPU, mapping thousands of real tweets into an explorable 3D emotion space — hand-written WGSL, live query retrieval, zero backend. — Dr. Safeer Ali Mirani*
+*Real sentence-transformer running in your browser on WebGPU, mapping thousands of real tweets into an explorable 3D emotion space — hand-written WGSL, live query retrieval, zero backend. Live at emotion-atlas.netlify.app. — Dr. Safeer Ali Mirani*

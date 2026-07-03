@@ -4,6 +4,8 @@
 
 _By **Dr. Safeer Ali Mirani** — GPU / XR / real-time visualisation engineer and computational neuroscientist (PhD)._
 
+**Live demo → [emotion-atlas.netlify.app](https://emotion-atlas.netlify.app)** — best in a WebGPU browser (Chrome/Edge 113+ or desktop Safari 18+). The first visit embeds all 16k tweets live (~1–2 min), then caches — later visits are instant.
+
 Emotion Atlas loads the **all-MiniLM-L6-v2** sentence-transformer directly in the browser (via transformers.js on WebGPU), fetches ~2,400 real tweets from the public **dair-ai/emotion** dataset live, and embeds every one into a 384-dimensional meaning vector. Those vectors are projected to 3D with principal component analysis and drawn as a point cloud — coloured by emotion — using hand-written WGSL. Type your own sentence and it's embedded live and dropped into the same space, with lines to its true nearest neighbours and a k-NN emotion prediction. Nothing is precomputed, bundled, or synthetic: the model and every tweet load at run time.
 
 It's also a homecoming: my MS thesis was fine-grained emotion detection from text, so this is that idea reborn as a live, GPU-accelerated, browser-native tool.
