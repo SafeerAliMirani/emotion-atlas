@@ -1,0 +1,11 @@
+# Netlify config for Emotion Atlas - a static site, no build step.
+# The app lives in web/ (index.html + js/ + css/); model and data load live.
+
+[build]
+  publish = "web"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
