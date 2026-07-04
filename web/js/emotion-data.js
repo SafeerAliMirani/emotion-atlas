@@ -1,9 +1,9 @@
-// emotion-data.js - loads REAL tweets + emotion labels from the public
+// emotion-data.js - loads real tweets and emotion labels from the public
 // dair-ai/emotion dataset via the Hugging Face datasets-server rows API
-// (CORS-enabled JSON, no backend). Verified live: rows are { text, label },
-// label is an index into EMOTIONS. Pages are capped at 100 rows each, so a
-// larger corpus is fetched with bounded concurrency (each row keeps its own
-// label, so out-of-order page completion is harmless).
+// (CORS-enabled JSON, no backend). Each row is { text, label }, where label
+// is an index into EMOTIONS. Pages are capped at 100 rows each, so a larger
+// corpus is fetched with bounded concurrency (each row keeps its own label,
+// so out-of-order page completion is harmless).
 
 const BASE = "https://datasets-server.huggingface.co/rows?dataset=dair-ai/emotion&config=split&split=train";
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Emotion Atlas — a language model's feelings, in 3D (WebGPU)</title>
+  <title>Emotion Atlas: a language model's feelings, in 3D (WebGPU)</title>
   <meta name="description" content="A real sentence-transformer runs in your browser on WebGPU and embeds thousands of real emotion-labelled tweets into an explorable 3D map. Built by Dr. Safeer Ali Mirani." />
   <meta name="author" content="Dr. Safeer Ali Mirani" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2305070e'/%3E%3Ccircle cx='11' cy='13' r='3' fill='%23f1b32b'/%3E%3Ccircle cx='21' cy='11' r='2.5' fill='%23e87ba4'/%3E%3Ccircle cx='22' cy='21' r='3' fill='%231baf7a'/%3E%3Ccircle cx='12' cy='22' r='2.5' fill='%233887e5'/%3E%3C/svg%3E" />
@@ -53,18 +53,18 @@
     <div class="spinner"></div>
     <div id="loading-text">Starting…</div>
     <div class="track"><div id="bar"></div></div>
-    <div class="load-note">A real model runs on your GPU — the first load downloads it once (~4 MB), then it's cached.</div>
+    <div class="load-note">A real model runs on your GPU. The first load downloads it once (~4 MB), then it's cached.</div>
   </div>
 
   <div id="about" class="overlay hidden" role="dialog" aria-modal="true" aria-label="About">
     <div class="about-card">
       <button id="about-close" class="ghost tiny"><span aria-hidden="true">✕</span> close</button>
       <h1>What you're looking at</h1>
-      <p>A real sentence-transformer — <b>all-MiniLM-L6-v2</b> — runs entirely <b>in your browser on WebGPU</b> (via transformers.js). It reads thousands of real tweets from the public <b>dair-ai/emotion</b> dataset and turns each one into a 384-dimensional vector that captures its meaning.</p>
+      <p>A real sentence-transformer, <b>all-MiniLM-L6-v2</b>, runs entirely <b>in your browser on WebGPU</b> (via transformers.js). It reads thousands of real tweets from the public <b>dair-ai/emotion</b> dataset and turns each one into a 384-dimensional vector that captures its meaning.</p>
       <p>Those vectors are projected to 3D with <b>principal component analysis</b>, so sentences with similar meaning sit close together. Colour is each tweet's real emotion label. When you drop in your own sentence, it's embedded live and placed by the same projection, with lines to its true nearest neighbours (cosine similarity) and a k-NN emotion vote.</p>
-      <p class="muted">Honest notes: positions are a PCA shadow of 384-D space, so some structure is lost; the "prediction" is a nearest-neighbour vote, not a trained classifier. Nothing is precomputed or synthetic — the model and every tweet load live.</p>
+      <p class="muted">Honest notes: positions are a PCA shadow of 384-D space, so some structure is lost; the "prediction" is a nearest-neighbour vote, not a trained classifier. Nothing is precomputed or synthetic, the model and every tweet load live.</p>
       <div class="about-credit">
-        <div>Designed &amp; built by <b>Dr. Safeer Ali Mirani</b> — GPU / XR / real-time visualisation engineer and computational neuroscientist (PhD). Hand-written WebGPU rendering; real in-browser ML.</div>
+        <div>Designed &amp; built by <b>Dr. Safeer Ali Mirani</b>, GPU / XR / real-time visualisation engineer and computational neuroscientist (PhD). Hand-written WebGPU rendering; real in-browser ML.</div>
         <div><a href="mailto:safeer.ali.mirani@gmail.com">safeer.ali.mirani@gmail.com</a> · <a href="https://safeeralimirani.netlify.app" target="_blank" rel="noopener">Portfolio</a> · <a href="https://github.com/SafeerAliMirani" target="_blank" rel="noopener">GitHub</a></div>
       </div>
     </div>

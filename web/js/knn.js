@@ -1,7 +1,7 @@
 // knn.js - cosine nearest-neighbour search of a query embedding against the
 // corpus. Embeddings are L2-normalised, so cosine similarity is just the dot
-// product. O(N*D) per query (~1M ops here) - instant. Returns the top-k indices
-// with their similarity, plus a kNN emotion vote for a "predicted emotion".
+// product. O(N*D) per query (~1M ops here), effectively instant. Returns the
+// top-k indices with their similarity, plus a kNN emotion vote for a "predicted emotion".
 
 const DIM = 384;
 

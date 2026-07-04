@@ -1,9 +1,7 @@
-// embedder.js - runs the REAL all-MiniLM-L6-v2 sentence-transformer fully in
+// embedder.js - runs the real all-MiniLM-L6-v2 sentence-transformer fully in
 // the browser on WebGPU (via transformers.js, loaded from a CDN) to turn text
-// into 384-D unit embeddings. No server, no build step. Verified live: WebGPU
-// backend works and embeddings are semantically meaningful (similar sentences
-// have higher cosine similarity). The model (~4 MB) downloads once and is then
-// cached by the browser, so repeat visits are instant.
+// into 384-D unit embeddings. No server, no build step. The model (~4 MB)
+// downloads once and is then cached by the browser, so repeat visits are instant.
 
 const CDN = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3";
 const MODEL = "Xenova/all-MiniLM-L6-v2";

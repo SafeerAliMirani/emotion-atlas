@@ -41,7 +41,7 @@ async function boot() {
 
   try {
     const CACHE_KEY = "dair-ai-emotion|all-MiniLM-L6-v2|" + TOTAL + "|v1";
-    setLoading("Loading model — first load only", 0.02);
+    setLoading("Loading model, first load only", 0.02);
     const modelP = loadEmbedder((frac) => setLoading("Downloading model on WebGPU", Math.max(0.02, frac)));
     const cached = await getCached(CACHE_KEY);
     if (cached && cached.embeddings && cached.texts) {
@@ -52,8 +52,8 @@ async function boot() {
       const data = await fetchEmotionTweets(TOTAL, (f) => setLoading("Fetching " + TOTAL.toLocaleString() + " real tweets", f));
       texts = data.texts; labels = data.labels; N = texts.length;
       await modelP;
-      setLoading("Embedding " + N.toLocaleString() + " tweets on WebGPU — one time, then cached", 0);
-      embeddings = await embed(texts, (f) => setLoading("Embedding on WebGPU — cached after this", f));
+      setLoading("Embedding " + N.toLocaleString() + " tweets on WebGPU, one time, then cached", 0);
+      embeddings = await embed(texts, (f) => setLoading("Embedding on WebGPU, cached after this", f));
       putCached(CACHE_KEY, { texts, labels, embeddings });
     }
     setLoading("Projecting to 3D (PCA)", 0.94);
