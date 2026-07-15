@@ -2,7 +2,7 @@
 <p align="center"><b>A real language model runs in your browser on WebGPU, reads thousands of real tweets, and turns their feelings into a 3D map you can fly through. Zero install, no backend.</b></p>
 
 <p align="center">
-  <a href="https://emotion-atlas.netlify.app"><img src="https://img.shields.io/badge/Live%20Demo-emotion--atlas.netlify.app-1baf7a?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo" /></a>
+  <a href="https://emotion-atlas-dww.pages.dev"><img src="https://img.shields.io/badge/Live%20Demo-emotion--atlas--dww.pages.dev-1baf7a?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Demo" /></a>
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/WebGPU-005A9C?style=for-the-badge&logo=webgpu&logoColor=white" alt="WebGPU" />
@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License" />
 </p>
 
-<p align="center"><b>Live demo:</b> <a href="https://emotion-atlas.netlify.app">emotion-atlas.netlify.app</a> (best in Chrome/Edge 113+ or desktop Safari 18+)</p>
+<p align="center"><b>Live demo:</b> <a href="https://emotion-atlas-dww.pages.dev">emotion-atlas-dww.pages.dev</a> (best in Chrome/Edge 113+ or desktop Safari 18+)</p>
 
 ## What it does
 
@@ -79,4 +79,4 @@ This app tells you its own limits, right in the "about" panel: the 3D positions 
 ---
 
 <p align="center">Built by <b>Dr. Safeer Ali Mirani</b>, GPU / XR / real-time visualisation engineer and computational neuroscientist (PhD).<br />
-<a href="mailto:safeer.ali.mirani@gmail.com">safeer.ali.mirani@gmail.com</a> · <a href="https://safeeralimirani.netlify.app">Portfolio</a> · <a href="https://github.com/SafeerAliMirani">GitHub</a> · <a href="https://www.linkedin.com/in/safeeralimirani">LinkedIn</a></p>
+<a href="mailto:safeer.ali.mirani@gmail.com">safeer.ali.mirani@gmail.com</a> · <a href="https://safeeralimirani.pages.dev">Portfolio</a> · <a href="https://github.com/SafeerAliMirani">GitHub</a> · <a href="https://www.linkedin.com/in/safeeralimirani">LinkedIn</a></p>
