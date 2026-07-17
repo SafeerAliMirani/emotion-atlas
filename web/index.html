@@ -83,8 +83,11 @@
 (function(){
   var E='https://safeer-analytics.safeer-ali-mirani.workers.dev/collect';
   function send(t,l){try{var b=JSON.stringify({type:t,label:l||null,path:location.pathname,referrer:document.referrer||null});
-    if(navigator.sendBeacon)navigator.sendBeacon(E,new Blob([b],{type:'application/json'}));
-    else fetch(E,{method:'POST',body:b,headers:{'Content-Type':'application/json'},keepalive:true});}catch(_){ }}
+    /* text/plain is REQUIRED: application/json is not CORS-safelisted, so the browser
+       needs a preflight, drops the beacon SILENTLY, and sendBeacon still returns true.
+       The Worker parses the body as JSON regardless of the declared type. */
+    if(navigator.sendBeacon)navigator.sendBeacon(E,new Blob([b],{type:'text/plain;charset=UTF-8'}));
+    else fetch(E,{method:'POST',body:b,headers:{'Content-Type':'text/plain;charset=UTF-8'},keepalive:true});}catch(_){ }}
   send('pageview');
   document.addEventListener('click',function(e){
     var a=e.target.closest?e.target.closest('a'):null; if(!a)return;
@@ -95,5 +98,38 @@
   },true);
 })();
 </script>
+<!-- tour: steps for this page, then the shared engine -->
+<script>
+window.TOUR_STEPS = [
+  {
+    "sel": "#hud",
+    "title": "What you are looking at",
+    "body": "Sixteen thousand real tweets, each one a point. Tweets that mean similar things sit near each other, because the position comes from what the sentence means rather than the words it uses."
+  },
+  {
+    "sel": "#query",
+    "title": "Put your own sentence in",
+    "body": "Type anything and press embed. The model runs here, in this tab, on your graphics card, and drops your sentence into the cloud where it belongs. Nothing is sent to a server."
+  },
+  {
+    "sel": "#panel section:has(#legend)",
+    "title": "The colours",
+    "body": "The labelled emotion each tweet came tagged with in the dataset. The model was never told these while placing them, so the colours clumping together is the result, not the setup. Click one to filter."
+  },
+  {
+    "sel": "#hint",
+    "title": "Moving around",
+    "body": "Drag to rotate, scroll to zoom, and click any point to read the tweet it came from."
+  },
+  {
+    "sel": "#about-btn",
+    "title": "Where it all comes from",
+    "body": "The dataset, the model, the licence, and who built this."
+  }
+];
+window.TOUR_OPTIONS = { readySel: "#hud" };
+</script>
+<script src="tour.js"></script>
+<!-- /tour -->
 </body>
 </html>
